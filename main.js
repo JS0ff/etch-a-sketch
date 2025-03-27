@@ -16,3 +16,10 @@ for (let i = 1; i <= 16; i++) {
     createGrid();
   }
 }
+
+const gridElement = document.querySelectorAll(".grid");
+for (const element of gridElement) {
+  element.addEventListener("mouseover", function () {
+    element.style.backgroundColor = "red";
+  });
+}
