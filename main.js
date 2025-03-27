@@ -23,3 +23,10 @@ for (const element of gridElement) {
     element.style.backgroundColor = "red";
   });
 }
+
+let numberOfGrid;
+const popButton = document.querySelector("#popup");
+popButton.addEventListener("click", function () {
+  numberOfGrid = prompt("Enter the number of squares for grid: ");
+  console.log(numberOfGrid);
+});
