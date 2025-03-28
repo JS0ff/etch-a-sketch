@@ -26,7 +26,10 @@ for (const element of gridElement) {
 let numberOfGrid;
 const popButton = document.querySelector("#popup");
 popButton.addEventListener("click", function () {
-  numberOfGrid = prompt("Enter the number of squares for grid: ");
+  numberOfGrid = prompt("Enter the number of squares for grid: (0-100)");
+  if (numberOfGrid > 100) {
+    numberOfGrid = 100;
+  }
   console.log(numberOfGrid);
   createUserGrid(numberOfGrid);
 });
