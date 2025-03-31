@@ -16,6 +16,10 @@
   flex: 1;
   flex-direction: row;
 }
+.grid {
+  flex: 1;
+  border: solid 1px;
+}
 #popup {
   margin: 10px 10px;
   width: 80px;
