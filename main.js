@@ -63,3 +63,8 @@ function createUserGrid(userNumber) {
     });
   }
 }
+
+//Create rgb color mode button
+const rgbButton = document.querySelector("#rgb");
+//Random color Generator
+//Change style of mouseover to random color
