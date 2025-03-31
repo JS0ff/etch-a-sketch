@@ -4,14 +4,12 @@
 }
 .container {
   display: flex;
-  justify-content: center;
+  border: solid 2px;
+  flex-direction: column;
   margin: 10px;
   padding: 10px;
-}
-.grid {
-  border: solid 2px;
-  padding: 10px;
-  margin: 0.5px;
+  width: 700px;
+  height: 700px;
 }
 #popup {
   margin: 10px 10px;
