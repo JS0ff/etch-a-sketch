@@ -69,4 +69,10 @@ function createUserGrid(userNumber) {
 //Create rgb color mode button
 const rgbButton = document.querySelector("#rgb");
 //Random color Generator
+function createRandomColor() {
+  let red = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  colorOfMouse = `rgb(${red},${green},${blue})`;
+}
 //Change style of mouseover to random color
