@@ -25,7 +25,7 @@ const gridElement = document.querySelectorAll(".grid");
 for (const element of gridElement) {
   //If mouse goes over the container color it to the brown color
   element.addEventListener("mouseover", function () {
-    element.style.backgroundColor = "brown";
+    element.style.backgroundColor = colorOfMouse;
   });
 }
 
@@ -61,7 +61,7 @@ function createUserGrid(userNumber) {
   const gridElement = document.querySelectorAll(".grid");
   for (const element of gridElement) {
     element.addEventListener("mouseover", function () {
-      element.style.backgroundColor = "brown";
+      element.style.backgroundColor = colorOfMouse;
     });
   }
 }
