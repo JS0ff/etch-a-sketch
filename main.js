@@ -1,4 +1,6 @@
 const mainContainer = document.querySelector(".container");
+//Default color of the mouse
+let colorOfMouse = "brown";
 
 // Creates a grid container
 function createGrid() {
