@@ -11,6 +11,11 @@
   width: 700px;
   height: 700px;
 }
+.row {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
 #popup {
   margin: 10px 10px;
   width: 80px;
