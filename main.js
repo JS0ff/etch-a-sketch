@@ -1,25 +1,12 @@
 //Create rgb color mode button
 const rgbButton = document.querySelector("#rgb");
-//Random color Generator
-function createRandomColor() {
-  let red = Math.floor(Math.random() * 256);
-  let green = Math.floor(Math.random() * 256);
-  let blue = Math.floor(Math.random() * 256);
-  colorOfMouse = `rgb(${red},${green},${blue})`;
-}
-//Change style of mouseover to random color
-rgbButton.addEventListener("click", function () {
-  for (const element of gridElement) {
-    createRandomColor();
-    element.addEventListener("mouseover", function () {
-      createRandomColor();
-    });
-  }
-});
-
+const popButton = document.querySelector("#popup");
 const mainContainer = document.querySelector(".container");
 //Default color of the mouse
 let colorOfMouse = "brown";
+
+// User interface to get user number of squares
+let numberOfGrid;
 
 // Creates a grid container
 function createGrid() {
@@ -48,9 +35,6 @@ for (const element of gridElement) {
   });
 }
 
-// User interface to get user number of squares
-let numberOfGrid;
-const popButton = document.querySelector("#popup");
 popButton.addEventListener("click", function () {
   // Limit the choice from 0 to 100 pixels
   numberOfGrid = prompt("Enter the number of squares for grid: (0-100)");
@@ -75,6 +59,7 @@ function createUserGrid(userNumber) {
       });
     }
   });
+
   for (let i = 1; i <= userNumber; i++) {
     row = document.createElement("div");
     row.className = "row";
@@ -83,6 +68,24 @@ function createUserGrid(userNumber) {
       createGrid();
     }
   }
+
+  //Random color Generator
+  function createRandomColor() {
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    colorOfMouse = `rgb(${red},${green},${blue})`;
+  }
+
+  //Change style of mouseover to random color
+  rgbButton.addEventListener("click", function () {
+    for (const element of gridElement) {
+      createRandomColor();
+      element.addEventListener("mouseover", function () {
+        createRandomColor();
+      });
+    }
+  });
 
   //Color pixels
   const gridElement = document.querySelectorAll(".grid");
