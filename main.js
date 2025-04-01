@@ -7,6 +7,15 @@ function createRandomColor() {
   let blue = Math.floor(Math.random() * 256);
   colorOfMouse = `rgb(${red},${green},${blue})`;
 }
+//Change style of mouseover to random color
+rgbButton.addEventListener("click", function () {
+  for (const element of gridElement) {
+    createRandomColor();
+    element.addEventListener("mouseover", function () {
+      createRandomColor();
+    });
+  }
+});
 
 const mainContainer = document.querySelector(".container");
 //Default color of the mouse
@@ -58,6 +67,14 @@ popButton.addEventListener("click", function () {
 // Creates a grid with the user number of pixels
 function createUserGrid(userNumber) {
   mainContainer.innerHTML = ""; // Delete the default 16x16 grid
+  colorOfMouse = "brown";
+  rgbButton.addEventListener("click", function () {
+    for (const element of gridElement) {
+      element.addEventListener("mouseover", function () {
+        createRandomColor();
+      });
+    }
+  });
   for (let i = 1; i <= userNumber; i++) {
     row = document.createElement("div");
     row.className = "row";
