@@ -6,7 +6,7 @@ const mainContainer = document.querySelector(".container");
 let numberOfGrid;
 
 //Default color of the mouse
-let colorOfMouse = "brown";
+let colorOfMouse = "rgb(141, 46, 213)";
 
 //Random color Generator
 function createRandomColor() {
@@ -70,7 +70,7 @@ popButton.addEventListener("click", function () {
 // Creates a grid with the user number of pixels
 function createUserGrid(userNumber) {
   mainContainer.innerHTML = ""; // Delete the default 16x16 grid
-  colorOfMouse = "brown";
+  colorOfMouse = "rgb(141, 46, 213)";
   rgbButton.addEventListener("click", function () {
     for (const element of gridElement) {
       element.addEventListener("mouseover", function () {
