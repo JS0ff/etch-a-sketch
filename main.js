@@ -121,6 +121,7 @@ function createUserGrid(userNumber) {
   for (const element of gridElement) {
     element.addEventListener("mouseover", function () {
       element.style.backgroundColor = colorOfMouse;
+      decreaseOpacity(element);
     });
   }
 }
