@@ -43,12 +43,39 @@ for (let i = 1; i <= 16; i++) {
   }
 }
 
+function decreaseOpacity(element) {
+  if (element.style.opacity === "") {
+    element.style.opacity = 1;
+  } else if (element.style.opacity === "1") {
+    element.style.opacity = 0.9;
+  } else if (element.style.opacity === "0.9") {
+    element.style.opacity = 0.8;
+  } else if (element.style.opacity === "0.8") {
+    element.style.opacity = 0.7;
+  } else if (element.style.opacity === "0.7") {
+    element.style.opacity = 0.6;
+  } else if (element.style.opacity === "0.6") {
+    element.style.opacity = 0.5;
+  } else if (element.style.opacity === "0.5") {
+    element.style.opacity = 0.4;
+  } else if (element.style.opacity === "0.4") {
+    element.style.opacity = 0.3;
+  } else if (element.style.opacity === "0.3") {
+    element.style.opacity = 0.2;
+  } else if (element.style.opacity === "0.2") {
+    element.style.opacity = 0.1;
+  } else if (element.style.opacity === "0.1") {
+    element.style.opacity = 0;
+  }
+}
+
 //Select all grid elements
 const gridElement = document.querySelectorAll(".grid");
 for (const element of gridElement) {
   //If mouse goes over the container color it to the brown color
   element.addEventListener("mouseover", function () {
     element.style.backgroundColor = colorOfMouse;
+    decreaseOpacity(element);
   });
 }
 
