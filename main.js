@@ -93,6 +93,7 @@ popButton.addEventListener("click", function () {
   } else if (numberOfGrid > 100) {
     while (numberOfGrid > 100) {
       // Loop until the choice is less than 100
+      alert("Your Number is Bigger than 100!!!");
       numberOfGrid = prompt("Enter the number less than or equal to 100!");
     }
   }
