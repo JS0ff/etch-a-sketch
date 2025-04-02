@@ -86,18 +86,24 @@ for (const element of gridElement) {
 const popButton = document.querySelector("#popup");
 popButton.addEventListener("click", function () {
   // Limit the choice from 0 to 100 pixels
-  numberOfGrid = prompt("Enter the number of squares for grid: (0-100)", 16);
+  numberOfGrid = prompt("Enter the number of squares for grid: (1-100)", 16);
   if (numberOfGrid === null) {
     // Default of squares always is 16
     numberOfGrid = 16;
-  } else if (numberOfGrid > 100) {
-    while (numberOfGrid > 100) {
+  } else if (numberOfGrid > 100 || numberOfGrid <= 0) {
+    while (numberOfGrid > 100 || numberOfGrid <= 0) {
       // Loop until the choice is less than 100
-      alert("Your Number is Bigger than 100!!!");
+      if (typeof numberOfGrid === "object") {
+        numberOfGrid = 16;
+        break;
+      } else if (numberOfGrid > 100) {
+        alert("Your Number is Bigger than 100!!!");
+      } else if (numberOfGrid <= 0) {
+        alert("Your number is less than or equal to 0");
+      }
       numberOfGrid = prompt("Enter the number less than or equal to 100!");
     }
   }
-  console.log(numberOfGrid);
   createUserGrid(numberOfGrid);
 });
 
