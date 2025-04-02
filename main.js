@@ -43,7 +43,9 @@ for (let i = 1; i <= 16; i++) {
   }
 }
 
+//Decreases the opacity of a gird element
 function decreaseOpacity(element) {
+  //Check if opacity have value and then start to decrease it
   if (element.style.opacity === "") {
     element.style.opacity = 1;
   } else if (element.style.opacity === "1") {
@@ -65,6 +67,7 @@ function decreaseOpacity(element) {
   } else if (element.style.opacity === "0.2") {
     element.style.opacity = 0.1;
   } else if (element.style.opacity === "0.1") {
+    //Pure black
     element.style.opacity = 0;
   }
 }
