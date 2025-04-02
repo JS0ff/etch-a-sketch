@@ -86,8 +86,11 @@ for (const element of gridElement) {
 const popButton = document.querySelector("#popup");
 popButton.addEventListener("click", function () {
   // Limit the choice from 0 to 100 pixels
-  numberOfGrid = prompt("Enter the number of squares for grid: (0-100)");
-  if (numberOfGrid > 100) {
+  numberOfGrid = prompt("Enter the number of squares for grid: (0-100)", 16);
+  if (numberOfGrid === null) {
+    // Default of squares always is 16
+    numberOfGrid = 16;
+  } else if (numberOfGrid > 100) {
     while (numberOfGrid > 100) {
       // Loop until the choice is less than 100
       numberOfGrid = prompt("Enter the number less than or equal to 100!");
